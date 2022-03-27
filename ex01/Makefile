@@ -6,15 +6,15 @@
 #    By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/16 14:46:31 by tblaase           #+#    #+#              #
-#    Updated: 2022/03/25 11:35:48 by tblaase          ###   ########.fr        #
+#    Updated: 2022/03/27 19:51:39 by tblaase          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		=
+NAME		=	ScavTrap
 
 CC			=	c++
 
-CFLAGS		=	-Wall -Werror -Wextra -std=c++98
+CFLAGS		=	-Wall -Werror -Wextra -std=c++98 -g
 
 # directories
 SRC_DIR		=	src/
@@ -31,7 +31,7 @@ UP			=	\033[A
 CUT			=	\033[K
 
 #source files
-SRC_FILES	=
+SRC_FILES	=	ClapTrap.cpp main.cpp ScavTrap.cpp
 
 OBJ_FILES	=	$(SRC_FILES:.cpp=.o)
 
@@ -43,7 +43,7 @@ OBJ			=	$(addprefix $(OBJ_DIR), $(OBJ_FILES))
 all: $(NAME)
 	@printf "\n"
 	@printf "$(GREEN)            ___ ___          ___    _____    _     _      ___ ___ \n$(RESET)"
-	@printf "$(GREEN) ___ _ _   |   |   |     ___|  _|  |    _| _| |_ _| |_   |   |_  |\n$(RESET)"
+	@printf "$(GREEN) ___ _ _   |   |_  |     ___|  _|  |    _| _| |_ _| |_   |   |_  |\n$(RESET)"
 	@printf "$(GREEN)| -_|_'_|  | | |_| |_   | . |  _|  |   |_ |_   _|_   _|  | | |_  |\n$(RESET)"
 	@printf "$(GREEN)|___|_,_|  |___|_____|  |___|_|    |_____|  |_|   |_|    |___|___|\n$(RESET)"
 	@printf "$(GREEN)                                                                  \n$(RESET)"
