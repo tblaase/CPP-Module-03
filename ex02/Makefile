@@ -6,11 +6,11 @@
 #    By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/16 14:46:31 by tblaase           #+#    #+#              #
-#    Updated: 2022/03/25 11:36:05 by tblaase          ###   ########.fr        #
+#    Updated: 2022/03/28 16:55:01 by tblaase          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		=
+NAME		=	FragTrap
 
 CC			=	c++
 
@@ -31,7 +31,7 @@ UP			=	\033[A
 CUT			=	\033[K
 
 #source files
-SRC_FILES	=
+SRC_FILES	=	ClapTrap.cpp FragTrap.cpp main.cpp ScavTrap.cpp
 
 OBJ_FILES	=	$(SRC_FILES:.cpp=.o)
 
