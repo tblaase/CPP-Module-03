@@ -6,30 +6,28 @@
 /*   By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 15:26:49 by tblaase           #+#    #+#             */
-/*   Updated: 2022/03/28 18:46:05 by tblaase          ###   ########.fr       */
+/*   Updated: 2022/03/29 13:39:57 by tblaase          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
 
 // Constructors
-FragTrap::FragTrap()
+FragTrap::FragTrap(): ClapTrap()
 {
-	this->_name = "defaultFT";
 	this->_hit_pts = 100;
 	this->_energy_pts = 100;
 	this->_attack_dmg = 30;
 	std::cout << "FragTrap Default Constructor called" << std::endl;
 }
 
-FragTrap::FragTrap(const FragTrap &copy):ClapTrap(copy)
+FragTrap::FragTrap(const FragTrap &copy): ClapTrap(copy)
 {
 	std::cout << "FragTrap Copy Constructor called" << std::endl;
 }
 
-FragTrap::FragTrap(std::string name)
+FragTrap::FragTrap(std::string name): ClapTrap(name)
 {
-	this->_name = name;
 	this->_hit_pts = 100;
 	this->_energy_pts = 100;
 	this->_attack_dmg = 30;
@@ -54,7 +52,7 @@ FragTrap &FragTrap::operator=(const FragTrap &src)
 }
 
 // Public Methods
-void	FragTrap::attack(const std::string& target)
+void	FragTrap::attack(const std::string &target)
 {
 	if (this->_energy_pts > 0 && this->_hit_pts > 0)
 	{

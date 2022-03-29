@@ -6,7 +6,7 @@
 /*   By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/25 10:33:58 by tblaase           #+#    #+#             */
-/*   Updated: 2022/03/27 20:07:11 by tblaase          ###   ########.fr       */
+/*   Updated: 2022/03/29 12:01:24 by tblaase          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ class ClapTrap
 	public:
 	// Constructors
 		ClapTrap();
-		ClapTrap(const ClapTrap& copy);
+		ClapTrap(const ClapTrap &copy);
 		ClapTrap(std::string name);
 
 	// Deconstructors
@@ -40,7 +40,7 @@ class ClapTrap
 		ClapTrap &operator=(const ClapTrap &src);
 
 	// Public Methods
-		void attack(const std::string& target);
+		void attack(const std::string &target);
 		void takeDamage(unsigned int amount);
 		void beRepaired(unsigned int amount);
 	// Getter

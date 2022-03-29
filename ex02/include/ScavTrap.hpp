@@ -6,7 +6,7 @@
 /*   By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/25 11:49:02 by tblaase           #+#    #+#             */
-/*   Updated: 2022/03/27 19:47:53 by tblaase          ###   ########.fr       */
+/*   Updated: 2022/03/29 12:01:40 by tblaase          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,14 @@
 
 // classes
 
-class ScavTrap:public ClapTrap
+class ScavTrap: public ClapTrap
 {
 	private:
 		bool _guarding_gate;
 	public:
 	// Constructors
 		ScavTrap();
-		ScavTrap(const ScavTrap& copy);
+		ScavTrap(const ScavTrap &copy);
 		ScavTrap(std::string name);
 
 	// Deconstructors
@@ -35,7 +35,7 @@ class ScavTrap:public ClapTrap
 		ScavTrap &operator=(const ScavTrap &src);
 
 	// Public Methods
-		void attack(const std::string& target);
+		void attack(const std::string &target);
 		void takeDamage(unsigned int amount);
 		void beRepaired(unsigned int amount);
 		void guardGate(void);
