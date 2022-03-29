@@ -6,7 +6,7 @@
 /*   By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/25 10:33:50 by tblaase           #+#    #+#             */
-/*   Updated: 2022/03/29 13:41:24 by tblaase          ###   ########.fr       */
+/*   Updated: 2022/03/29 14:03:42 by tblaase          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,33 +53,43 @@ void	ClapTrap::attack(const std::string &target)
 {
 	if (this->_energy_pts > 0 && this->_hit_pts > 0)
 	{
-		std::cout << "ClapTrap " << _name << " attacks " << target << ", causing " << _attack_dmg << " points of damage!" << std::endl;
+		std::cout << "ClapTrap " << this->_name << " attacks " << target << ", causing " << this->_attack_dmg << " points of damage!" << std::endl;
 		this->_energy_pts--;
 	}
 	else if (this->_energy_pts == 0)
-		std::cout << "\033[31mCLapTrap " << _name << "is not able to attack " << target << ", because he has no energy points left.\033[0m" << std::endl;
+		std::cout << "\033[31mClapTrap " << this->_name << " is not able to attack " << target << ", because he has no energy points left.\033[0m" << std::endl;
 	else
-		std::cout << "\033[31mClapTrap" << _name << " is not able to attack " << target << ", because he has not enough hit points.\033[0m" << std::endl;
+		std::cout << "\033[31mClapTrap " << this->_name << " is not able to attack " << target << ", because he has not enough hit points.\033[0m" << std::endl;
 }
 
 void	ClapTrap::takeDamage(unsigned int amount)
 {
-	this->_hit_pts -= amount;
-	std::cout << "ClapTrap " << _name << " was attacked and lost " << amount << " hit points, he now has " << _hit_pts << " hit points." << std::endl;
+	if (this->_hit_pts > amount)
+		this->_hit_pts -= amount;
+	else if (this->_hit_pts > 0)
+		this->_hit_pts = 0;
+	else
+	{
+		std::cout << "\033[33mClapTrap " << this->_name << " is already dead, stop beating it.\033[0m" << std::endl;
+		return ;
+	}
+	std::cout << "ClapTrap " << this->_name << " was attacked and lost " << amount << " hit points, he now has " << this->_hit_pts << " hit points." << std::endl;
 }
 
 void	ClapTrap::beRepaired(unsigned int amount)
 {
-	if (this->_energy_pts > 0 && this->_hit_pts > 0)
+	if (this->_energy_pts > 0 && this->_hit_pts > 0 && this->_hit_pts + amount <= 10)
 	{
 		this->_hit_pts += amount;
-		std::cout << "ClapTrap " << _name << " repaired itself and gained " << amount << " of hit points, he now has " << _hit_pts << "hit points." << std::endl;
+		std::cout << "ClapTrap " << this->_name << " repaired itself and gained " << amount << " of hit points, he now has " << this->_hit_pts << "hit points." << std::endl;
 		this->_energy_pts--;
 	}
 	else if (this->_energy_pts == 0)
-		std::cout << "\033[31mClapTrap " << _name << " is not able to repair itself, because he doesn't have enough energy points.\033[0m" << std::endl;
+		std::cout << "\033[31mClapTrap " << this->_name << " is not able to repair itself, because he doesn't have enough energy points.\033[0m" << std::endl;
+	else if (this->_hit_pts == 0)
+		std::cout << "\033[31mClapTrap " << this->_name << " is not able to repair itself, because he doesn't have enough hit points.\033[0m" << std::endl;
 	else
-		std::cout << "\033[31mClapTrap " << _name << " is not able to repair itself, because he doesn't have enough hit points.\033[0m" << std::endl;
+		std::cout << "\033[33mClapTrap " << this->_name << " can't be repaired to have more than 10 hit points.\033[0m" << std::endl;
 }
 // Getter
 

@@ -6,7 +6,7 @@
 /*   By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/25 10:33:58 by tblaase           #+#    #+#             */
-/*   Updated: 2022/03/29 13:30:20 by tblaase          ###   ########.fr       */
+/*   Updated: 2022/03/29 13:58:28 by tblaase          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@ class ClapTrap
 {
 	private:
 		std::string _name;
-		int _hit_pts;
-		int _energy_pts;
-		int _attack_dmg;
+		unsigned int _hit_pts;
+		unsigned int _energy_pts;
+		unsigned int _attack_dmg;
 
 	public:
 	// Constructors
