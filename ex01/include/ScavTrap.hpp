@@ -6,7 +6,7 @@
 /*   By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/25 11:49:02 by tblaase           #+#    #+#             */
-/*   Updated: 2022/03/29 13:32:09 by tblaase          ###   ########.fr       */
+/*   Updated: 2022/03/29 16:44:46 by tblaase          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,6 @@ class ScavTrap: public ClapTrap
 
 	// Public Methods
 		void attack(const std::string &target);
-		void takeDamage(unsigned int amount);
-		void beRepaired(unsigned int amount);
 		void guardGate(void);
 	// Getter
 

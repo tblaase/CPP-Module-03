@@ -6,7 +6,7 @@
 /*   By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/25 10:33:55 by tblaase           #+#    #+#             */
-/*   Updated: 2022/03/29 12:52:29 by tblaase          ###   ########.fr       */
+/*   Updated: 2022/03/29 16:54:37 by tblaase          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,7 @@ int main()
 
 		std::cout << "\033[34mTesting\033[0m" << std::endl;
 		e.highFiveGuys();
+		e.attack("some random dude");
 		e.takeDamage(101);
 		e.takeDamage(1);
 		e.attack("some random dude");
