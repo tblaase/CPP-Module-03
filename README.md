@@ -6,10 +6,10 @@ My solution for CPP Module 03 of the Common core of 42 school.
 
 
 The Scope of this Modul was to get to know C++ further and come in contact with inheritance for classes:
-- ex00:
-- ex01:
-- ex02:
-- ex03:
+- ex00: creation of the base class to inherit from
+- ex01: inherits from base class and adds new values to the attributes as well as a new function
+- ex02: inherits from base class and adds new values to the attributes as well as a new function
+- ex03: the diaond problem: inherits some attributes from ex02 and some attributes from ex01 and adds an extra function to show its relation to ex00
 
 
 All of those exercises are compilable with the `-std=c++98-flag`, since this was a requirement for this project.<br>
