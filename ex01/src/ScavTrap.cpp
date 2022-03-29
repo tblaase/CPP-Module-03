@@ -6,16 +6,15 @@
 /*   By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/25 12:19:54 by tblaase           #+#    #+#             */
-/*   Updated: 2022/03/27 20:29:10 by tblaase          ###   ########.fr       */
+/*   Updated: 2022/03/29 13:41:03 by tblaase          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 
 // Constructors
-ScavTrap::ScavTrap()
+ScavTrap::ScavTrap(): ClapTrap()
 {
-	this->_name = "defaultST";
 	this->_hit_pts = 100;
 	this->_energy_pts = 50;
 	this->_attack_dmg = 20;
@@ -23,15 +22,14 @@ ScavTrap::ScavTrap()
 	std::cout << "ScavTrap Default Constructor called" << std::endl;
 }
 
-ScavTrap::ScavTrap(const ScavTrap &copy):ClapTrap(copy)
+ScavTrap::ScavTrap(const ScavTrap &copy): ClapTrap(copy)
 {
 	this->_guarding_gate = copy._guarding_gate;
 	std::cout << "ScavTrap Copy Constructor called" << std::endl;
 }
 
-ScavTrap::ScavTrap(std::string name)
+ScavTrap::ScavTrap(std::string name): ClapTrap(name)
 {
-	this->_name = name;
 	this->_hit_pts = 100;
 	this->_energy_pts = 50;
 	this->_attack_dmg = 20;
@@ -57,7 +55,7 @@ ScavTrap &ScavTrap::operator=(const ScavTrap &src)
 }
 
 // Public Methods
-void	ScavTrap::attack(const std::string& target)
+void	ScavTrap::attack(const std::string &target)
 {
 	if (this->_energy_pts > 0 && this->_hit_pts > 0)
 	{

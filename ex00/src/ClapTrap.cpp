@@ -6,7 +6,7 @@
 /*   By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/25 10:33:50 by tblaase           #+#    #+#             */
-/*   Updated: 2022/03/25 11:33:45 by tblaase          ###   ########.fr       */
+/*   Updated: 2022/03/29 13:41:24 by tblaase          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 
 // Constructors
-ClapTrap::ClapTrap(): _name("defaultCT"), _hit_pts(10), _energy_pts(10), _attack_dmg(0)
+ClapTrap::ClapTrap(): _name("default"), _hit_pts(10), _energy_pts(10), _attack_dmg(0)
 {
 	std::cout << "ClapTrap Default Constructor called" << std::endl;
 }
@@ -49,7 +49,7 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &src)
 }
 
 // Public Methods
-void	ClapTrap::attack(const std::string& target)
+void	ClapTrap::attack(const std::string &target)
 {
 	if (this->_energy_pts > 0 && this->_hit_pts > 0)
 	{
