@@ -13,8 +13,8 @@ My solution for CPP Module 03 of the Common core of 42 school.
 - [CPP-Module-04](https://github.com/tblaase/CPP-Module-04)
 - [CPP-Module-05](https://github.com/tblaase/CPP-Module-05)
 - [CPP-Module-06](https://github.com/tblaase/CPP-Module-06)
-<!-- - [CPP-Module-07](https://github.com/tblaase/CPP-Module-07)
-- [CPP-Module-08](https://github.com/tblaase/CPP-Module-08) -->
+- [CPP-Module-07](https://github.com/tblaase/CPP-Module-07)
+<!-- - [CPP-Module-08](https://github.com/tblaase/CPP-Module-08) -->
 
 
 ## About this Module
