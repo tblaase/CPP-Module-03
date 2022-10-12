@@ -6,7 +6,7 @@
 /*   By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 15:26:49 by tblaase           #+#    #+#             */
-/*   Updated: 2022/03/29 16:52:16 by tblaase          ###   ########.fr       */
+/*   Updated: 2022/07/05 17:38:49 by tblaase          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ FragTrap::FragTrap(): ClapTrap()
 	if (this->_hit_pts == 10)
 		this->_hit_pts = 100;
 	this->_energy_pts = 100;
-	if (this->_attack_dmg == 0)
+	// if (this->_attack_dmg == 0)
 		this->_attack_dmg = 30;
 	std::cout << "FragTrap Default Constructor for " << this->_name << " called" << std::endl;
 }
